@@ -1,0 +1,44 @@
+// _adaptation.scss - Исправленный файл с миксинами
+
+// Переменные брейкпоинтов
+$breakpoints: ("mini-mobile":390, "mobile": 480px, "tablet": 768px, "laptop": 1024px, "desktop": 1200px, "large": 1440px);
+
+// Правильное вычисление значений
+$tablet-min: 769px; // tablet + 1
+$laptop-min: 1025px; // laptop + 1
+$desktop-min: 1201px; // desktop + 1
+
+// Альтернативный вариант - более простой и надежный
+@mixin for-mobile {
+    @media (max-width: 767px) {
+        @content;
+    }
+}
+@mixin for-mini-mobile {
+    @media (max-width: 480px) {
+        @content;
+    }
+}
+
+@mixin for-tablet {
+    @media (min-width: 768px) and (max-width: 1023px) {
+        @content;
+    }
+}
+
+@mixin for-laptop {
+    @media (min-width: 1024px) and (max-width: 1199px) {
+        @content;
+    }
+}
+
+@mixin for-desktop {
+    @media (min-width: 1200px) {
+        @content;
+    }
+}
+
+// Использование простого варианта:
+// @include breakpoint(768px, 1023px) { ... }
+// @include breakpoint(768px) { ... }
+// @include breakpoint($max: 767px) { ... }
