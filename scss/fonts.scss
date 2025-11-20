@@ -3,6 +3,16 @@
     box-sizing: border-box;
     padding: 0;
 }
+$eastern-blue: #1e81b0;
+$green-white: #eeeee4;
+$burnt-sienna: #e28743;
+$tacao: #eab676;
+$glacier: #76b5c5;
+$eternity: #21130d;
+$burnt-umber: #873e23;
+$powder-blue: #abdbe3;
+$catalina-blue: #063970;
+$chathams-blue: #154c79;
 
 // Переменные цветов
 $black-color: #1e180d;
@@ -19,7 +29,7 @@ $white-color: #f4f6f7;
     // Светлая тема
     --bg-primary: #{$white-color};
     --bg-secondary: #f8f9fa;
-    --text-primary: #{$black-color};
+    --text-primary: #{$tacao};
     --text-secondary: #{$brown-beige-color};
     --accent-color: #{$autumn-color};
     --header-bg: #{$white-color};
@@ -107,7 +117,7 @@ body {
     z-index: 500;
     width: 100%;
     height: 50px;
-    background-color: var(--header-bg);
+    background-color:transparent;
     transition: all 0.3s ease;
     
     &.scrolled {
@@ -176,6 +186,14 @@ body {
 }
 
 // Обновленные стили для hero
+#hero{
+    position: relative;
+    width: 100%;
+    height: 100vh; // Занимает всю высоту экрана
+    background: 
+        linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), // Опционально: затемнение для лучшей читаемости
+        url(../img/5.png) no-repeat center center / cover;
+}
 .hero {
     height: 604px;
     display: flex;
@@ -199,6 +217,7 @@ body {
     }
     
     &__wrappers {
+        
         display: grid;
         justify-items: center;
     }
@@ -237,6 +256,7 @@ body {
         @include heading-light;
         text-align: center;
         color: var(--text-primary);
+        margin-top: 30px;
     }
     
     &__wrappers {
@@ -244,12 +264,26 @@ body {
     }
     
     &__subtitle {
+        margin-top: 40px;
         @include heading-accent;
         text-align: center;
         color: var(--accent-color);
         
         @include for-tablet {
             text-align: center;
+        }
+    }
+    &__img{
+        width: 100%;
+        height: 40vh;
+        margin-left: 50px;
+        pointer-events: none;
+        user-select: none;
+        @include for-mobile{
+            margin: 0;
+        }
+        @include for-mini-mobile{
+            margin: 0;
         }
     }
     
@@ -586,9 +620,187 @@ body {
         }
     }
 }
+.prize {
+    padding: 80px 0;
+    background: var(--bg-secondary);
+    color: var(--text-primary);
+    position: relative;
+    overflow: hidden;
+    
+    // Декоративный элемент для красоты
+    &::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      right: -10%;
+      width: 300px;
+      height: 300px;
+      background: var(--accent-color);
+      opacity: 0.1;
+      border-radius: 50%;
+    }
+    
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+      position: relative;
+      z-index: 1;
+    }
+    
+    &__content {
+      padding-right: 20px;
+    }
+    
+    &__title {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 20px;
+      line-height: 1.2;
+      color: var(--text-primary);
+    }
+    
+    &__subtitle {
+      font-size: 1.2rem;
+      opacity: 0.9;
+      margin-bottom: 30px;
+      font-weight: 500;
+      color: var(--text-secondary);
+    }
+    
+    &__list {
+      list-style: none;
+      padding: 0;
+      margin-bottom: 30px;
+    }
+    
+    &__item {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 20px;
+      padding: 15px;
+      background: var(--card-bg);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      transition: all 0.3s ease;
+      
+      &:hover {
+        transform: translateX(10px);
+        border-color: var(--accent-color);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      }
+    }
+    
+    &__icon {
+      font-size: 1.5rem;
+      margin-right: 15px;
+      flex-shrink: 0;
+      filter: grayscale(0.3);
+    }
+    
+    &__text {
+      line-height: 1.5;
+      color: var(--text-primary);
+      
+      strong {
+        color: var(--accent-color);
+        font-weight: 600;
+      }
+    }
+    
+    &__highlight {
+      background: var(--card-bg);
+      padding: 20px;
+      border-radius: 12px;
+      border-left: 4px solid var(--accent-color);
+      font-weight: 600;
+      font-size: 1.1rem;
+      color: var(--text-primary);
+      border: 1px solid var(--border-color);
+    }
+    
+    &__visual {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    
+    &__image {
+      max-width: 400px;
+      
+      svg {
+        width: 100%;
+        height: auto;
+        filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.1));
+      }
+    }
+    
+    // Адаптивность
+    @media (max-width: 768px) {
+      padding: 60px 0;
+      
+      .container {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+      
+      &__content {
+        padding-right: 0;
+      }
+      
+      &__title {
+        font-size: 2rem;
+      }
+      
+      &__visual {
+        order: -1;
+      }
+      
+      &__image {
+        max-width: 300px;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      padding: 40px 0;
+      
+      &__item {
+        flex-direction: column;
+        text-align: center;
+        padding: 12px;
+      }
+      
+      &__icon {
+        margin-right: 0;
+        margin-bottom: 10px;
+      }
+      
+      &__title {
+        font-size: 1.75rem;
+      }
+    }
+  }
+  
+  // Дополнительные стили для темной темы
+  [data-theme="dark"] {
+    .prize {
+      &__item {
+        &:hover {
+          box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+      }
+      
+      &__icon {
+        filter: grayscale(0.1) brightness(1.1);
+      }
+    }
+  }
 #footer {
     background: $brown-beige-color;
-
     width: 100%;
     overflow: hidden;
     @include for-mini-mobile{
