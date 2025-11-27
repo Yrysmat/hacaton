@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="./css/fonts.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <base href="/" /><link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+
     <link
       href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&display=swap"
       rel="stylesheet"
@@ -18,13 +20,16 @@
     <header id="header">
       <div class="container">
         <div class="header">
+          <a href="https://ya.ru" class="header__link"
+            ><img src="./img/Кыргызстан/Лого.svg" alt="" class="header__img"
+          /></a>
           <nav class="header__nav">
             <a class="header__link" href="#hero">О Хакатоне</a>
-            <a class="header__link" href="#stages">Расписание</a>
+            <a class="header__link" href="#stages">Этапы</a>
             <a class="header__link" href="#conditions">Условия</a>
-            <a class="header__link" href="#stages">Призы</a>
+            <a class="header__link" href="#prize">Призы</a>
             <a class="header__link" href="#footer">Контакты</a>
-            <button class="header__btn">0</button>
+            <a class="header__links" href="/kg.html">kg</a>
           </nav>
         </div>
       </div>
@@ -34,15 +39,15 @@
         <div class="hero">
           <div class="hero__wrapper">
             <h1 class="hero__h1">
-              Хакатон <span class="hero__h1-span">UrbanTech</span> для умного и
-              безопасного города
+              Хакатон <span class="hero__h1-span">UrbanTech</span> <br />
+              для умного и безопасного города
             </h1>
             <div class="hero__wrappers">
               <h3 class="hero__subtitle">
                 15 декабря — питчинг в Бишкеке, Технопарк (ул. Горького 1/2)
               </h3>
               <h3 class="hero__subtitle">10-13 декабря 2025 — онлайн-этап</h3>
-              <button class="hero__btn">Зарегестрироваться</button>
+              <button class="hero__btn" onclick="window.location.href='https://docs.google.com/forms/d/1VtaCY6VhE-RyP9nj3uWft1Dbkx3ptVf46702vFJMxiw/edit'">Участвовать</button>
             </div>
           </div>
         </div>
@@ -53,17 +58,18 @@
         <h2 class="hacaton__title">О хакатоне</h2>
         <div class="hacaton">
           <div class="hacaton__wrapper">
-            <h2 class="hacaton__subtitle">наши цели</h2>
             <div class="hacaton__text">
               Хакатон UrbanTech — это хакатон, где молодёжь создаёт
               технологические решения для города будущего. 5 дней командной
               работы, менторы из индустрии, мастер-классы и питчинг в Бишкеке —
               всё ради того, чтобы Бишкек стал безопаснее, удобнее и умнее.
             </div>
-            <h2 class="hacaton__subtitle">Цель:</h2>
+            <h2 class="hacaton__subtitle" id="hacatitle">Цель Хакатона:</h2>
             <div class="hacaton__text">
               Создать инновационные решения для улучшения городской среды и
               безопасности.
+              <h2 class="hacaton__subtitle">Стоимость:участие бесплатное</h2>
+              
             </div>
           </div>
           <div class="hacaton__wrappers">
@@ -75,147 +81,649 @@
     <section id="stages">
       <div class="container">
         <div class="stages">
-          <h2 class="stages__title">Этапы Хакатон UrbanTech:</h2>
+          <h2 class="stages__title">Этапы Хакатона UrbanTech</h2>
           <div class="stages-grid">
             <div class="stages-div">
-              <h3 class="stages__subtitle">Онлайн (10 – 13 декабря):</h3>
+              <h3 class="stages__subtitle">1.Регистрация</h3>
               <p class="stages__text">
-                • Работа команд над идеями и прототипами; <br>• Мастер-классы от
-                менторов и экспертов; <br>• Обратная связь и поддержка кураторов.
+                Осуществляется посредством заполнения электронной формы. Заявку
+                подает капитан команды. Состав команды: От 3 и более участников
+                в одной Команде <br />
+                Обязательная регистрация до 8 декабря 17:00. Заполните все поля
+              формы и подтвердите участие. Добавить себя в группу в ТГ
+              </p>
+            </div>
+            <div class="stages-div">
+              <h3 class="stages__subtitle">2.Онлайн 10 – 13 декабря</h3>
+              <p class="stages__text">
+                • Работа команд над идеями и прототипами; <br />• Мастер-классы
+                от менторов и экспертов; <br />• Обратная связь и поддержка
+                кураторов.
               </p>
             </div>
             <div class="stages-div">
               <h3 class="stages__subtitle">
-                Оффлайн (15 декабря, Бишкек, Технопарк (ул. Горького 1/2):
+                3.Оффлайн 15 декабря, Бишкек,  ул. Горького 1/2,Технопарк Мета Холл 2 этаж.
               </h3>
               <p class="stages__text">
-                • Финальный питчинг проектов перед жюри; <br>• Обсуждение идей и
-                обмен опытом; <br>• Награждение победителей и networking.
+                • Финальный питчинг проектов перед жюри; <br />• Обсуждение идей
+                и обмен опытом; <br />• Награждение победителей и networking.
               </p>
-            </div>
-            <div class="stages-div">
-              <h3 class="stages__subtitle">
-                Продолжительность хакатона — 5 дней онлайн + 1 день оффлайн.
-              </h3>
-              <p class="stages__text"></p>
             </div>
           </div>
         </div>
       </div>
     </section>
+
     <section id="conditions">
       <div class="container">
         <h2 class="conditions__title">Кто может участвовать?</h2>
         <div class="conditions">
           <div class="conditions__card">
             <div class="conditions__icon">1</div>
-            <h3 class="conditions__card-title">Регистрация</h3>
+            <h3 class="conditions__card-title">Студенты</h3>
             <p class="conditions__card-text">
-              Обязательная регистрация до 25 октября. Заполните все поля формы и
-              подтвердите участие.
+              Возраст: 18-25 лет. Участвовать могут студенты всех
+                направлений(не только IT направления) 
             </p>
           </div>
           <div class="conditions__card">
             <div class="conditions__icon">2</div>
             <h3 class="conditions__card-title">Команда</h3>
             <p class="conditions__card-text">
-              команды до 5 человек или индивидуальные участники (мы поможем
+              Команды до 5 человек или индивидуальные участники (мы поможем
               собрать команду).
             </p>
           </div>
-
-          
 
           <div class="conditions__card">
             <div class="conditions__icon">3</div>
             <h3 class="conditions__card-title">Опыт</h3>
             <p class="conditions__card-text">
-              студенты и молодые специалисты 18–25 лет;
+              Можно участвовать тем, у кого нет опыта участия в хакатонах, мы расскажем как работать над идеей проекта. Те, у кого уже есть опыт участия в хакатонах - вы знаете что делать ;) 
             </p>
           </div>
 
           <div class="conditions__card">
             <div class="conditions__icon">4</div>
-            <h3 class="conditions__card-title">Технологии</h3>
+            <h3 class="conditions__card-title">Направления</h3>
             <p class="conditions__card-text">
-              начинающие разработчики, дизайнеры, урбанисты, инженеры, активисты
-              и все, кто любит технологии;
+              Если вы студент, который учится на дизайнера, урбаниста, инженера, филолога или любая другая сфера - вы можете участвовать. Если же вы программист - добро пожаловать тоже, помогите оформить крутую идею в виде технологического решения.
+              
             </p>
           </div>
 
-          <h3 class="conditions__card-text">Главное — желание изменить город.</h3>
+          <h3 class="conditions__card-h3">Главное — желание изменить город!</h3>
+        </div>
+      </div>
+    </section>
+    <section id="stages">
+      <div class="container">
+        <div class="stages">
+          <h2 class="stages__title">Темы хакатона</h2>
+          <div class="stages-grid">
+            <div class="stages-div">
+              <h3 class="stages__subtitle">
+                1. Городская экология и микроклимат
+              </h3>
+              <p class="stages__text">
+                Городская экология и микроклимат Цифровые решения для
+                качества воздуха, мониторинга микроклимата, озеленения и
+                комфортных городских пространств - с учетом потребностей разных
+                групп населения.
+              </p>
+            </div>
+            <div class="stages-div">
+              <h3 class="stages__subtitle">
+                2. Транспорт и безопасная мобильность
+              </h3>
+              <p class="stages__text">
+                 Транспорт и безопасная мобильность Умные маршруты, навигация,
+                безопасные пешеходные зоны, улучшение общественного транспорта -
+                доступные и удобные для всех пользователей города.
+              </p>
+            </div>
+            <div class="stages-div">
+              <h3 class="stages__subtitle">
+                3. Инфраструктура и энергоэффективность
+              </h3>
+              <p class="stages__text">
+                 Инфраструктура и энергоэффективность Умное освещение,
+                мониторинг состояния инфраструктуры, энергоэффективные решения -
+                ориентированные на повышение безопасности и удобства горожан
+                разных возрастов и возможностей.
+              </p>
+            </div>
+            <div class="stages-div">
+              <h3 class="stages__subtitle">
+                4. Городская безопасность и комфортная среда
+              </h3>
+              <p class="stages__text">
+                Городская безопасность и комфортная среда, цифровая
+                безопасность Цифровые инструменты анализа рисков, освещенность,
+                навигация, безопасные пространства - с обязательным учётом
+                удобства и доступности.Цифровая безопасность, включая защиту
+                данных, устройств и онлайн-активности от взломов, мошенничества
+                и несанкционированного доступа.
+              </p>
+            </div>
+            <div class="stages-div">
+              <h3 class="stages__subtitle">
+                5. Инновационные цифровые решения для города
+              </h3>
+              <p class="stages__text">
+                 Инновационные цифровые решения для города Приложения,
+                платформы, городские сервисы, data-driven подходы - которые
+                помогают жителям ориентироваться, сообщать о проблемах и
+                получать поддержку независимо от их особенностей.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
     <section class="prize">
       <div class="container">
         <div class="prize__content">
-          <h2 class="prize__title">Призы и возможности</h2>
-          <p class="prize__subtitle">Что получат участники:</p>
-          
+          <h2 class="prize__title">Полезные ссылки </h2>
+          <p class="prize__subtitle"> ниже представлен список полезных ресурсов для вдохновения и поиска идей</p>
+
           <ul class="prize__list">
             <li class="prize__item">
-              <span class="prize__icon">🎯</span>
+              <a href="http://silk.kg" class="prize__icon"
+                ><span class="prize__icon">SILK</span></a
+              >
               <div class="prize__text">
-                <strong>Поддержку от партнёров</strong> и возможность реализовать проект
+                <strong
+                  >Лаборатория Социальных Инноваций в Кыргызстане (SILK)
+                  является инициативой Факультета Социальных Наук Американского
+                  Университета в Центральной Азии. Основная цель SILK - участие
+                  в социально значимых проектах в Кыргызстане и разработка
+                  инновационных решений социальных проблем. SILK - это
+                  платформа, на которой преподаватели разрабатывают и реализуют
+                  проекты исследований и гражданского участия по очень широкому
+                  спектру тем.
+                  <a href="http://silk.kg" class="prize__link"
+                    >http://silk.kg</a
+                  ></strong
+                >
               </div>
             </li>
-            
+
+            <li class="prize__item">
+              <a href="https://peshcom.org/" class="prize__icon">peshcom</a>
+              <div class="prize__text">
+                <strong
+                  >Сертификаты на бесплатное обучение курсам на Яндекс практикум
+                  <a href="http://peshcom.org/" class="prize__link"
+                    >http://peshcom.org/</a
+                  ></strong
+                >
+              </div>
+            </li>
+
+            <li class="prize__item">
+              <a href="https://urbaneyes.kg/ru" class="prize__icon">urbaneyes</a>
+              <a href="https://urbaneyes.kg/ru " class="prize__icon"
+                ><span class="prize__icon"
+                  > Это уникальная платформа, которая помогает улучшать
+                  городскую среду на основе актуальных данных
+                  <a href="https://urbaneyes.kg/ru" class="prize__link"
+                    >https://urbaneyes.kg/ru</a
+                  ></span
+                ></a
+              >
+              <div class="prize__text"></div>
+            </li>
+
+            <li class="prize__item">
+              <a href="https://drive.google.com/file/d/16gsXtti4Irxr5B4sAkM1dUAKC-NJ2pte/view" class="prize__icon">Исследование</a>
+              <a
+                href="https://drive.google.com/file/d/16gsXtti4Irxr5B4sAkM1dUAKC-NJ2pte/view"
+                class="prize__icon"
+              >
+                <span class="prize__icon">
+                   Алтынай Ногойбаевой -2021 год “Обзор новых
+                  технологий для городских исследований”</span
+                >
+                <a
+                  href="https://drive.google.com/file/d/16gsXtti4Irxr5B4sAkM1dUAKC-NJ2pte/view"
+                  class="prize__link"
+                  >hhttps://drive.google.com/file/d/16gsXtti4Irxr5B4sAkM1dUAKC-NJ2pte/view</a
+                ></a
+              >
+            </li>
+
+            <li class="prize__item">
+              <a href="https://drive.google.com/file/d/1cCZzOv6VAZ7UkGRBh8kH-z43RG_aYFcP/view" class="prize__icon">Исследование</a>
+              <a
+                href="https://drive.google.com/file/d/1cCZzOv6VAZ7UkGRBh8kH-z43RG_aYFcP/view "
+                class="prize__icon"
+                ><span class="prize__icon"
+                  >Исследование про пешеходную доступность улицы Чуй</span
+                ></a
+              >
+              <div class="prize__text">
+                <a
+                  href="https://drive.google.com/file/d/1cCZzOv6VAZ7UkGRBh8kH-z43RG_aYFcP/view"
+                  class="prize__link"
+                  >https://drive.google.com/file/d/1cCZzOv6VAZ7UkGRBh8kH-z43RG_aYFcP/view</a
+                >
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="prize__visual">
+          <div class="prize__image">
+            <img
+              src="./img/silk_full_white.png"
+              alt="alica"
+              class="prize__img"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+   
+    <div class="container">
+      <div class="btn"><button class="btn_t" onclick="window.location.href='https://docs.google.com/forms/d/1VtaCY6VhE-RyP9nj3uWft1Dbkx3ptVf46702vFJMxiw/edit'">Участвовать</button></div>
+    </div>
+    <section class="yandex">
+      <div class="container">
+        <h2 class="yandex__h2">Спонсор</h2>
+        <div class="yandex">
+          <div class="yandex__wrap">
+            <a href="https://ya.ru" class="yandex__link"
+              ><img
+                src="./img/Кыргызстан/Лого.svg"
+                class="yandex__img"
+                alt="yandex"
+              />
+            </a>
+          </div>
+          <div class="yandex__wrapper">
+            <h2 class="yandex__title">
+              
+            </h2>
+            <p class="yandex__text">
+              Яндекс Кыргызстан — IT-компания, которая разрабатывает и внедряет
+              технологии на основе искусственного интеллекта и машинного
+              обучения для повышения качества жизни людей и улучшения цифровой
+              среды страны. Компания также развивает городские, развлекательные,
+              облачные, портальные и геосервисы. Помимо этого, она реализует
+              образовательные и социальные проекты.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="prize" id="prize">
+      <div class="container">
+        <div class="prize__content">
+          <h2 class="prize__title">Призы </h2>
+
+          <ul class="prize__list">
+            <li class="prize__item">
+              <span class="prize__icon"><i class="fa-solid fa-award"></i></span>
+              <div class="prize__texts">
+                <strong
+                  >Умная колонка Яндекс Станция Алиса мини получат первые 3
+                  места(КАЖДЫЙ УЧАСТНИК)</strong
+                >
+              </div>
+            </li>
+
             <li class="prize__item">
               <span class="prize__icon">🎁</span>
               <div class="prize__text">
-                <strong>Ценные призы и подарки</strong>
+                <strong
+                  >Сертификаты на бесплатное обучение курсам на Яндекс Практикум
+                </strong>
               </div>
             </li>
-            
+
             <li class="prize__item">
               <span class="prize__icon">📻</span>
               <div class="prize__text">
-                <strong>Умная колонка Яндекс Станция Мини</strong>
+                <strong
+                  >Мастер классы от сотрудников-разработчиков компании
+                  Яндекс</strong
+                >
               </div>
             </li>
-            
+
             <li class="prize__item">
               <span class="prize__icon">👥</span>
               <div class="prize__text">
                 <strong>Опыт командной работы</strong> и консультации экспертов
               </div>
             </li>
-            
+
             <li class="prize__item">
               <span class="prize__icon">🌐</span>
               <div class="prize__text">
-                <strong>Networking</strong> с представителями ИТ-компаний, стартапов и городских инициатив
+                <strong>Networking</strong> с представителями ИТ-компаний,
+                стартапов и городских инициатив
               </div>
             </li>
           </ul>
-          
+
           <div class="prize__highlight">
             Лучшие идеи — шанс стать частью реальных городских изменений!
           </div>
         </div>
-        
+
         <div class="prize__visual">
           <div class="prize__image">
-            <!-- Можно использовать SVG иллюстрацию или изображение -->
-            <svg viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <circle cx="200" cy="200" r="180" fill="#667eea" fill-opacity="0.1"/>
-              <circle cx="200" cy="150" r="40" fill="#764ba2" fill-opacity="0.3"/>
-              <rect x="160" y="190" width="80" height="100" rx="10" fill="#667eea" fill-opacity="0.5"/>
-              <circle cx="180" cy="220" r="8" fill="white"/>
-              <circle cx="220" cy="220" r="8" fill="white"/>
-              <path d="M170 260C170 255 175 250 180 250H220C225 250 230 255 230 260V270H170V260Z" fill="white"/>
-            </svg>
+            <img src="./img/alica.jpg" alt="alica" class="prize__img" />
           </div>
         </div>
+      </div>
+    </section>
+    <section id="conditions">
+      <div class="container">
+        <h2 class="conditions__title">
+          Ниже список курсов, из которого выберут победители
+        </h2>
+        <div class="conditions-info">
+          <table>
+            <tbody>
+              <tr>
+                <td>
+                  Каждый член команды, занявшей 1 место, выбирает один курс из
+                  списка и проходит его бесплатно. <br />
+                  Для курса "Дизайн мобильных и кросс-платформенных приложений"
+                  требуется владеть Figma, знать основы цвета, композиции,
+                  типографики, сеток (есть входной тест). <br />
+                  Для курса "React-разработчик" требуется знать основы JS, CSS,
+                  HTML и уметь работать с Git и NPM (есть входной тест).
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <h3 class="conditions__subtitle">1 Место</h3>
+        <div class="conditions-table">
+          <table>
+            <thead>
+              <tr>
+                <th>№</th>
+                <th>Название курса</th>
+                <th>Длительность</th>
+                <th>Стоимость</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="conditions-table__number">1</td>
+                <td>
+                  <a
+                    href="https://practicum.yandex.ru/user-experience-research/?from=catalog"
+                    class="conditions-info-a"
+                    >UX‑исследования</a
+                  >
+                </td>
+                <td>4 месяца</td>
+                <td>92000 KGS</td>
+              </tr>
+              <tr>
+                <td class="conditions-table__number">2</td>
+                <td>
+                  <a
+                    href="https://practicum.yandex.ru/courses/qa-engineer-test/?from=catalog"
+                    class="conditions-info-a"
+                    >Инженер по тестированию</a
+                  >
+                </td>
+                <td>5 месяцев</td>
+                <td>83000 KGS</td>
+              </tr>
+              <tr>
+                <td class="conditions-table__number">3</td>
+                <td>
+                  <a
+                    href="https://practicum.yandex.ru/team-management/?from=catalog"
+                    class="conditions-info-a"
+                    >Курс по управлению командой</a
+                  >
+                </td>
+                <td>4 недели</td>
+                <td>78500 KGS</td>
+              </tr>
+              <tr>
+                <td class="conditions-table__number">4</td>
+                <td>
+                  <a
+                    href="https://practicum.yandex.ru/mobile-app-design/"
+                    class="conditions-info-a"
+                    >Дизайн мобильных и кросс-платформенных приложений</a
+                  >
+                </td>
+                <td>3 месяца</td>
+                <td>72000 KGS</td>
+              </tr>
+              <tr>
+                <td class="conditions-table__number">5</td>
+                <td>
+                  <a
+                    href="https://practicum.yandex.ru/project-management-basics/?from=catalog"
+                    class="conditions-info-a"
+                    >Основы управления проектами: обучение с сопровождением</a
+                  >
+                </td>
+                <td>2 месяца</td>
+                <td>71500 KGS</td>
+              </tr>
+              <tr>
+                <td class="conditions-table__number">6</td>
+                <td>
+                  <a
+                    href="https://practicum.yandex.ru/react/?from=catalog"
+                    class="conditions-info-a"
+                    >React-разработчик</a
+                  >
+                </td>
+                <td>3 месяца</td>
+                <td>69500 KGS</td>
+              </tr>
+              <tr>
+                <td class="conditions-table__number">7</td>
+                <td>
+                  <a
+                    href="https://practicum.yandex.ru/product-approach/?from=catalog"
+                    class="conditions-info-a"
+                    >Основы продакт-менеджмента</a
+                  >
+                </td>
+                <td>3 месяца</td>
+                <td>67000 KGS</td>
+              </tr>
+              <tr>
+                <td class="conditions-table__number">8</td>
+                <td>
+                  <a
+                    href="https://practicum.yandex.ru/ai-tools-for-designers/?from=catalog"
+                    class="conditions-info-a"
+                    >Нейросети для дизайна</a
+                  >
+                </td>
+                <td>2 месяца</td>
+                <td>64000 KGS</td>
+              </tr>
+              <tr>
+                <td class="conditions-table__number">9</td>
+                <td>
+                  <a
+                    href="https://practicum.yandex.ru/thinking/?from=catalog"
+                    class="conditions-info-a"
+                    >Навыки критического мышления для менеджеров</a
+                  >
+                </td>
+                <td>2 месяца</td>
+                <td>55000 KGS</td>
+              </tr>
+              <tr>
+                <td class="conditions-table__number">10</td>
+                <td>
+                  <a
+                    href="https://practicum.yandex.ru/catalog/?from=main_programming_card&searchText=инструменты+начинающего+руководителя"
+                    class="conditions-info-a"
+                    >Инструменты начинающего руководителя</a
+                  >
+                </td>
+                <td>1 месяц</td>
+                <td>42500 KGS</td>
+              </tr>
+              <tr>
+                <td class="conditions-table__number">11</td>
+                <td>
+                  <a
+                    href="https://practicum.yandex.ru/argumentation/?from=catalog"
+                    class="conditions-info-a"
+                    >Навыки аргументации для руководителей</a
+                  >
+                </td>
+                <td>1 месяц</td>
+                <td>33500 KGS</td>
+              </tr>
+              <tr>
+                <td class="conditions-table__number">12</td>
+                <td>
+                  <a
+                    href="https://practicum.yandex.ru/html-css/?from=catalog"
+                    class="conditions-info-a"
+                    >Профессиональная вёрстка на HTML и CSS</a
+                  >
+                </td>
+                <td>3 месяца</td>
+                <td>24000 KGS</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3 class="conditions__subtitle">2 Место</h3>
+        <div class="conditions-info">
+          <table>
+            <tbody>
+              <tr>
+                <td>
+                  Каждый член команды, занявшей 2 место, выбирает один курс из
+                  списка и проходит его бесплатно.
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="conditions-table">
+          <table>
+            <thead>
+              <tr>
+                <th>№</th>
+                <th>Название курса</th>
+                <th>Длительность</th>
+                <th>Стоимость</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="conditions-table__number">1</td>
+                <td>
+                  <a
+                    href="https://practicum.yandex.ru/thinking/?from=catalog"
+                    class="conditions-info-a"
+                    >Навыки критического мышления для менеджеров</a
+                  >
+                </td>
+                <td>2 месяца</td>
+                <td>55000 KGS</td>
+              </tr>
+              <tr>
+                <td class="conditions-table__number">2</td>
+                <td>
+                  <a
+                    href="https://practicum.yandex.ru/catalog/?from=main_programming_card&searchText=инструменты+начинающего+руководителя"
+                    class="conditions-info-a"
+                    >Инструменты начинающего руководителя</a
+                  >
+                </td>
+                <td>1 месяц</td>
+                <td>42500 KGS</td>
+              </tr>
+              <tr>
+                <td class="conditions-table__number">3</td>
+                <td>
+                  <a
+                    href="https://practicum.yandex.ru/argumentation/?from=catalog"
+                    class="conditions-info-a"
+                    >Навыки аргументации для руководителей</a
+                  >
+                </td>
+                <td>1 месяц</td>
+                <td>33500 KGS</td>
+              </tr>
+              <tr>
+                <td class="conditions-table__number">4</td>
+                <td>
+                  <a
+                    href="https://practicum.yandex.ru/html-css/?from=catalog"
+                    class="conditions-info-a"
+                    >Профессиональная вёрстка на HTML и CSS</a
+                  >
+                </td>
+                <td>3 месяца</td>
+                <td>24000 KGS</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+      
       </div>
     </section>
     <footer id="footer">
       <div class="container">
         <div class="footer">
-          <h2 class="footer__partners-title">Наши Организаторы</h2>
+          <h2 class="footer__partners-title">Организаторы</h2>
+          <div class="footer__div">
+            <img src="./img/clean.png" alt="techaim" class="footer__image" />
+            <p class="footer__text">
+              Общественный фонд "Тэкайым"- это неправительственная
+              некоммерческая организация, созданная в Бишкеке, Кыргызстан. Её
+              главная цель - расширение прав и возможностей для девушек через
+              использование технологий. Все начиналось как сообщество девушек в
+              сферах информационных технологий (ИТ) и STEAM (наука, технологии,
+              инженерия, искусство и математика). Сегодня это устойчивая
+              организация, которая занимается реализацией проектов и
+              образовательных программ по обучению цифровым профессиям, развитию
+              стартапов и продвижению STEAM образования.
+            </p>
+          </div>
           <div class="footer__orgainz"></div>
-          <h2 class="footer__partners-title">Наши партнеры</h2>
+          <h2 class="footer__partners-title">Партнеры</h2>
+          <div class="footer__imgage">
+            <a href="" class="footer__link"
+              ><img
+                src="./img/Coat_of_arms_of_Bishkek_Kyrgyzstan.svg"
+                alt="bishkek"
+                class="footer__img"
+            /></a>
+            <a href="" class="footer__link"
+              ><img
+                src="./img/image.png"
+                alt="bishkek"
+                class="footer__img"
+                id="liga"
+            /></a>
+            <a href="" class="footer__link"
+              ><img
+                src="./img/photo_5278261004741578068_x.jpg"
+                alt="bishkek"
+                class="footer__img"
+                id="ligaa"
+            /></a>
+          </div>
         </div>
 
         <!-- Основной блок с информацией -->
@@ -235,15 +743,11 @@
           <div class="footer__contacts">
             <h3 class="footer__contacts-title">Контакты</h3>
             <address class="footer__address">
-              <p class="footer__contact-item">г. Город, Улица, д. 00</p>
               <p class="footer__contact-item">
-                <a href="tel:+79999999999" class="footer__contact-link"
-                  >+7 (999) 999-99-99</a
-                >
-              </p>
-              <p class="footer__contact-item">
-                <a href="mailto:hello@hackathon.ru" class="footer__contact-link"
-                  >hello@hackathon.ru</a
+                <a
+                  href="mailto:hackatontechaim@gmail.com"
+                  class="footer__contact-link"
+                  >techaim@techaim.org</a
                 >
               </p>
             </address>
@@ -257,16 +761,16 @@
                 href="https://www.instagram.com/techaim.kg/"
                 class="footer__social-link"
                 aria-label="Instagram"
-                >In</a
+                ><img src="./img/instagram-svgrepo-com.svg" alt="instagram" class="footer__images"></a
               >
               <a href="#" class="footer__social-link" aria-label="Telegram"
-                >TG</a
+                ><img src="./img/telegram-alt-svgrepo-com.svg" alt="tg" class="footer__images"></a
               >
               <a
                 href="https://www.facebook.com/techaim.kg/"
                 class="footer__social-link"
                 aria-label="Facebook"
-                >F</a
+                ><img src="./img/facebook-svgrepo-com.svg" alt="facebook" class="footer__images"></a
               >
             </div>
           </div>
@@ -275,8 +779,8 @@
         <!-- Нижняя часть с копирайтом -->
         <div class="footer__bottom">
           <p class="footer__copyright">
-            &copy; Название Хакатона <span id="currentYear">2024</span>. Все
-            права защищены.
+            &copy; techaim <span id="currentYear">2025</span>. Все права
+            защищены.
           </p>
           <div class="footer__legal">
             <a href="#" class="footer__legal-link"

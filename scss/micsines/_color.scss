@@ -8,3 +8,39 @@ $gray-color:#a7b7c0;
 $white-color:#f4f6f7;
 
 
+
+$eastern-blue: #1e81b0;
+$green-white: #eeeee4;
+$burnt-sienna: #e28743;
+$tacao: #eab676;
+$glacier: #76b5c5;
+$eternity: #21130d;
+$burnt-umber: #873e23;
+$powder-blue: #abdbe3;
+$catalina-blue: #063970;
+$chathams-blue: #154c79;
+
+// Переменные цветов
+$black-color: #1e180d;
+$beige-color: #795e46;
+$tobacco-color: #bf9d7f;
+$autumn-color: #bf6929;
+$brown-color: #49311c;
+$brown-beige-color: #342e27;
+$gray-color: #a7b7c0;
+$white-color: #f4f6f7;
+
+// Переменные для тем
+:root {
+    // Светлая тема
+    --bg-primary: #1a1a1a;
+    --bg-secondary: #2d2d2d;
+    --text-primary: #{$white-color};
+    --text-secondary: #{$gray-color};
+    --accent-color: #{$autumn-color};
+    --header-bg: #2d2d2d;
+    --card-bg: rgba(191, 105, 41, 0.15);
+    --border-color: rgba(191, 105, 41, 0.4);
+    --footer-bg: #1a1a1a;
+    --footer-text: #{$gray-color};
+}

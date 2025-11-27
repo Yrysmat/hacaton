@@ -1,8 +1,8 @@
 document.addEventListener('DOMContentLoaded', function () {
     // Select all elements with the class 'stage'
-    var stageElements = document.querySelectorAll('.stages-div');
+    let stageElements = document.querySelectorAll('.stages-div');
     // Create a new Intersection Observer
-    var observer = new IntersectionObserver(function (entries) {
+    let observer = new IntersectionObserver(function (entries) {
         entries.forEach(function (entry) {
             // Check if the current element is intersecting the viewport
             if (entry.isIntersecting) {
@@ -22,8 +22,8 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 document.addEventListener('DOMContentLoaded', function () {
-    var conditionCards = document.querySelectorAll('.conditions__card');
-    var observer = new IntersectionObserver(function (entries) {
+    let conditionCards = document.querySelectorAll('.conditions__card');
+    let observer = new IntersectionObserver(function (entries) {
         entries.forEach(function (entry) {
             if (entry.isIntersecting) {
                 setTimeout(function () {
@@ -41,9 +41,9 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 window.addEventListener('scroll', function () {
-    var navbar = document.getElementById('header');
-    var links = document.querySelectorAll('.header__link');
-    var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    let  navbar = document.getElementById('header');
+    let  links = document.querySelectorAll('.header__link');
+    let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
     // Check if the navbar element was found before using it
     if (scrollTop > 100) {
         navbar === null || navbar === void 0 ? void 0 : navbar.classList.add('scrolled');
@@ -73,3 +73,42 @@ document.addEventListener('DOMContentLoaded', function() {
         localStorage.setItem('theme', newTheme);
     });
 });
+const burgerBtn = document.getElementById('burgerBtn');
+    const navMenu = document.getElementById('navMenu');
+    const header = document.getElementById('header');
+    const navLinks = document.querySelectorAll('.header__link');
+
+    // Toggle burger menu
+    burgerBtn.addEventListener('click', () => {
+      burgerBtn.classList.toggle('header__burger--active');
+      navMenu.classList.toggle('header__nav--active');
+      document.body.style.overflow = navMenu.classList.contains('header__nav--active') ? 'hidden' : '';
+    });
+
+    // Close menu when clicking on a link
+    navLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        burgerBtn.classList.remove('header__burger--active');
+        navMenu.classList.remove('header__nav--active');
+        document.body.style.overflow = '';
+      });
+    });
+
+    // Header scroll effect
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) {
+        header.classList.add('header--scrolled');
+      } else {
+        header.classList.remove('header--scrolled');
+      }
+    });
+
+    // Close menu when clicking outside
+    document.addEventListener('click', (e) => {
+      if (!header.contains(e.target) && navMenu.classList.contains('header__nav--active')) {
+        burgerBtn.classList.remove('header__burger--active');
+        navMenu.classList.remove('header__nav--active');
+        document.body.style.overflow = '';
+      }
+    });
+    
