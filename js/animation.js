@@ -120,3 +120,47 @@ window.addEventListener('scroll', () => {
         header.classList.remove('scrolled');
     }
 });
+// Таймер обратного отсчета до дедлайна регистрации
+function initializeCountdown() {
+    // Устанавливаем дедлайн: 8 декабря 2024 года, 17:00
+    const deadline = new Date('December 8, 2025 17:00:00').getTime();
+    
+    function updateCountdown() {
+        const now = new Date().getTime();
+        const timeLeft = deadline - now;
+        
+        // Если время вышло
+        if (timeLeft < 0) {
+            clearInterval(countdownInterval);
+            document.querySelector('.countdown-timer').innerHTML = 
+                '<div class="countdown-expired">Регистрация закрыта</div>';
+            return;
+        }
+        
+        // Расчет дней, часов, минут и секунд
+        const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+        
+        // Обновление отображения
+        document.getElementById('days').textContent = days.toString().padStart(2, '0');
+        document.getElementById('hours').textContent = hours.toString().padStart(2, '0');
+        document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
+        document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
+    }
+    
+    // Обновление каждую секунду
+    const countdownInterval = setInterval(updateCountdown, 1000);
+    
+    // Первоначальный запуск
+    updateCountdown();
+    
+    // Остановка таймера при уходе со страницы для экономии ресурсов
+    window.addEventListener('beforeunload', () => {
+        clearInterval(countdownInterval);
+    });
+}
+
+// Инициализация таймера когда DOM загружен
+document.addEventListener('DOMContentLoaded', initializeCountdown);
