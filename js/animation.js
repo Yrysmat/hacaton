@@ -73,42 +73,50 @@ document.addEventListener('DOMContentLoaded', function() {
         localStorage.setItem('theme', newTheme);
     });
 });
-const burgerBtn = document.getElementById('burgerBtn');
-    const navMenu = document.getElementById('navMenu');
+
+    // Burger menu functionality
+const burgerBtn = document.querySelector('.header__burger');
+const navMenu = document.querySelector('.header__nav');
+const body = document.body;
+
+// Create overlay element
+const overlay = document.createElement('div');
+overlay.className = 'header__overlay';
+body.appendChild(overlay);
+
+// Toggle burger menu
+burgerBtn.addEventListener('click', () => {
+    burgerBtn.classList.toggle('header__burger--active');
+    navMenu.classList.toggle('header__nav--active');
+    overlay.classList.toggle('header__overlay--active');
+    body.style.overflow = navMenu.classList.contains('header__nav--active') ? 'hidden' : '';
+});
+
+// Close menu when clicking on links
+const navLinks = document.querySelectorAll('.header__link, .header__links');
+navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+        burgerBtn.classList.remove('header__burger--active');
+        navMenu.classList.remove('header__nav--active');
+        overlay.classList.remove('header__overlay--active');
+        body.style.overflow = '';
+    });
+});
+
+// Close menu when clicking overlay
+overlay.addEventListener('click', () => {
+    burgerBtn.classList.remove('header__burger--active');
+    navMenu.classList.remove('header__nav--active');
+    overlay.classList.remove('header__overlay--active');
+    body.style.overflow = '';
+});
+
+// Header scroll effect
+window.addEventListener('scroll', () => {
     const header = document.getElementById('header');
-    const navLinks = document.querySelectorAll('.header__link');
-
-    // Toggle burger menu
-    burgerBtn.addEventListener('click', () => {
-      burgerBtn.classList.toggle('header__burger--active');
-      navMenu.classList.toggle('header__nav--active');
-      document.body.style.overflow = navMenu.classList.contains('header__nav--active') ? 'hidden' : '';
-    });
-
-    // Close menu when clicking on a link
-    navLinks.forEach(link => {
-      link.addEventListener('click', () => {
-        burgerBtn.classList.remove('header__burger--active');
-        navMenu.classList.remove('header__nav--active');
-        document.body.style.overflow = '';
-      });
-    });
-
-    // Header scroll effect
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > 50) {
-        header.classList.add('header--scrolled');
-      } else {
-        header.classList.remove('header--scrolled');
-      }
-    });
-
-    // Close menu when clicking outside
-    document.addEventListener('click', (e) => {
-      if (!header.contains(e.target) && navMenu.classList.contains('header__nav--active')) {
-        burgerBtn.classList.remove('header__burger--active');
-        navMenu.classList.remove('header__nav--active');
-        document.body.style.overflow = '';
-      }
-    });
-    
+    if (window.scrollY > 50) {
+        header.classList.add('scrolled');
+    } else {
+        header.classList.remove('scrolled');
+    }
+});
