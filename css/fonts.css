@@ -9,7 +9,7 @@
   --bg-secondary: #2d2d2d;
   --text-primary: #f4f6f7;
   --text-secondary: #a7b7c0;
-  --accent-color: #bf6929;
+  --accent-color: #cec110;
   --header-bg: #2d2d2d;
   --card-bg: rgba(191, 105, 41, 0.15);
   --border-color: rgba(191, 105, 41, 0.4);
@@ -295,6 +295,7 @@ body {
   text-decoration: none;
   transition: all 0.2s ease;
   position: relative;
+  bottom: 20px;
   font-weight: 700;
   padding: 5px 12px;
   border: 2px solid var(--accent-color);
@@ -599,7 +600,7 @@ body {
 .hacaton__subtitle {
   margin-top: 40px;
   font-family: "Montserrat", sans-serif;
-  color: #bf6929;
+  color: #cec110;
   font-weight: 700;
   line-height: 1.3;
   text-align: center;
@@ -908,7 +909,7 @@ body {
 .conditions__icon {
   width: 60px;
   height: 60px;
-  background: #bf6929;
+  background: #cec110;
   border-radius: 50%;
   display: flex;
   align-items: center;
