@@ -1316,8 +1316,8 @@
     background: $brown-beige-color;
     width: 100%;
     overflow: hidden;
+   
 }
-
 .footer {
     color: var(--text-primary);
     padding: 60px 20px 20px;
@@ -1339,143 +1339,38 @@
         text-align: center;
         font-family: $font-family-comforta;
     }
-
     &__orgainz {
         margin-top: 80px;
     }
-
-    // Контейнер для логотипов партнеров
-    &__imgage {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 30px;
-        max-width: 800px;
-        margin: 0 auto;
-        padding: 10px 0;
-
-        @include for-tablet {
-            grid-template-columns: repeat(2, 1fr);
-            gap: 25px;
-        }
-
-        @include for-mobile {
-            grid-template-columns: repeat(2, 1fr);
-            gap: 15px;
-            padding: 15px;
-        }
-    }
-
-    &__link {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 10px;
-        background: rgba(255, 255, 255, 0.05);
-        border-radius: 12px;
-        transition: all 0.3s ease;
-        width: 100%;
-        min-height: 160px;
-
-        &:hover {
-            background: rgba(139, 69, 19, 0.2);
-            transform: translateY(-5px);
-            box-shadow: 0 5px 15px rgba(139, 69, 19, 0.3);
-        }
-
-        @include for-mobile {
-            min-height: 120px;
-            padding: 15px;
-        }
-    }
-
     &__img {
         width: 152px;
         height: 152px;
-        object-fit: contain;
-        transition: transform 0.3s ease;
-
-        &:hover {
-            transform: scale(1.05);
-        }
-
-        @include for-mobile {
-            width: 120px;
-            height: 120px;
-        }
-
-        &#liga {
-            width: 180px;
-            height: 152px;
-            
-            @include for-mobile {
-                width: 140px;
-                height: 120px;
-            }
-        }
-
-        &#ligaa {
-            width: 152px;
-            height: 152px;
-            
-            @include for-mobile {
-                width: 120px;
-                height: 120px;
-            }
+        &s{
+            width: 225px;height: 100px;
         }
     }
-
-    &__imgs {
-        width: 225px;
-        height: 100px;
-        object-fit: contain;
-        transition: transform 0.3s ease;
-
-        &:hover {
-            transform: scale(1.05);
-        }
-
-        @include for-mobile {
-            width: 180px;
-            height: 80px;
-        }
-    }
-
     &__image {
         width: 40vh;
         height: 96px;
-        object-fit: contain;
-        
-        @include for-mobile {
+        @include for-mobile{
             width: 100%;
-            max-width: 300px;
-            height: auto;
-            max-height: 80px;
+            height: 20vh;
         }
     }
-
     &__text {
         @include heading-dark;
-        max-width: 450px;
+        width: 450px;
         font-weight: 400;
-        line-height: 1.6;
-        
-        @include for-mobile {
-            max-width: 100%;
-            font-size: 0.9rem;
+        @include for-mobile{
+            width: 300px;
         }
     }
-
     &__div {
         display: flex;
         justify-content: space-evenly;
         align-items: center;
-        gap: 30px;
-        flex-wrap: wrap;
-        
         @include for-mobile {
-            flex-direction: column;
-            gap: 20px;
-            text-align: center;
+            display: block;
         }
     }
 
@@ -1486,9 +1381,8 @@
         max-width: 800px;
         margin: 0 auto;
         align-items: center;
-        
         @include for-mobile {
-            width: 100%;
+            width: 100%; // Измените с 380px на 100%
             max-width: 100%;
             padding: 0 15px;
         }
@@ -1508,11 +1402,10 @@
             background: rgba(139, 69, 19, 0.2);
             transform: translateY(-5px);
         }
-        
         @include for-mobile {
-            padding: 10px;
+            padding: 10px; // Уменьшите padding
             height: 70px;
-            width: auto;
+            width: auto; // Измените с 150px на auto
             max-width: 120px;
         }
     }
@@ -1524,31 +1417,32 @@
         .footer__logo-item:hover & {
             opacity: 1;
         }
-        
-        @include for-mobile {
+        @include for-mobile{
             min-height: 25px;
+
         }
     }
 
     &__main-content {
+        // display: grid;
+        //grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        //40px;
         display: flex;
         justify-content: space-around;
         align-items: start;
         max-width: 1200px;
         margin: 0 auto 50px;
-        gap: 40px;
-        
         @include for-tablet {
             display: flex;
             justify-content: space-between;
             align-items: start;
-            gap: 30px;
         }
-        
         @include for-mobile {
             display: grid;
-            grid-template-columns: 1fr;
-            grid-gap: 30px;
+            grid-template-columns: repeat(1, 3fr);
+            grid-template-rows: repeat(2, 1fr);
+            grid-column-gap: 5px;
+            grid-row-gap: 10px;
         }
     }
 
@@ -1566,6 +1460,7 @@
             font-weight: 600;
         }
     }
+    
 
     &__nav-list {
         list-style: none;
@@ -1584,7 +1479,6 @@
         color: #cccccc;
         text-decoration: none;
         transition: color 0.3s ease;
-
         &:hover {
             color: #a0522d;
         }
@@ -1601,7 +1495,6 @@
     &__social-links {
         display: flex;
         gap: 15px;
-        flex-wrap: wrap;
     }
 
     &__social-link {
@@ -1636,12 +1529,6 @@
         }
     }
 
-    &__copyright {
-        @include for-mobile {
-            font-size: 0.85rem;
-        }
-    }
-
     &__legal {
         display: flex;
         gap: 20px;
@@ -1651,17 +1538,12 @@
             gap: 10px;
         }
     }
-
     &__images {
         width: 48px;
         height: 48px;
-        transition: transform 0.3s ease;
-
-        &:hover {
-            transform: scale(1.1);
-        }
     }
 }
+
 #liga {
     width: 175px;
     &a {
